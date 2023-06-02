@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "URL Verifier",
+  "version": "1.0",
+  "description": "Parses URLs on pages and tells you if those are legit or not.",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions":[
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ]
+    }
+  ]
+}

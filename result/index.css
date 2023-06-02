@@ -1,0 +1,52 @@
+:root {
+  --var-color-success: #388E3C;
+  --var-color-fail: #D32F2F;
+  --var-color-dialog: #212121;
+  --var-color-text: #FAFAFA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--var-color-text);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--var-color-fail);
+}
+
+.main {
+  padding: 1em;
+  border-radius: 20px;
+  background-color: var(--var-color-dialog);
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.url {
+  font-size: 1em;
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+}
+
+.result div {
+  display: none;
+}
+
+.result div span {
+  width: 100%;
+  font-size: large;
+  text-overflow: "…";
+}
